@@ -10,11 +10,11 @@ class musica:
         ventana.title("Reproductor") #Titulo de la ventana.
         ventana.config(bg="#0069c0",bd="25") #Caracteristicas del fondo de la ventana. Marco de la ventana.
 
-        abrir=Button(ventana,text="Abrir",width=10,bg="#FF0000",relief="groove",bd="4")
+        abrir=Button(ventana,text="Abrir",width=10,bg="#2196f3",relief="groove",bd="4",command=abrir)
         abrir.place(x=60,y=50)
-        reproducir=Button(ventana,text="Reproducir",width=10,bg="#008000",relief="groove",bd="4")
+        reproducir=Button(ventana,text="Reproducir",width=10,bg="#7f00b2",relief="groove",bd="4",command=reproducir)
         reproducir.place(x=60,y=90)
-        pause=Button(ventana,text="Pausa",width=10,bg="red",relief="groove",bd="4")
+        pause=Button(ventana,text="Pausa",width=10,bg="#ab3ed8",relief="groove",bd="4",command=pause)
         pause.place(x=60,y=130)
         self.abri_musica=False
         self.repro_musica=False
@@ -25,15 +25,14 @@ class musica:
             if self.abri_musica:
                 mixer.music.load(self.abri_musica)
                 mixer.music.play()
-        def pausar(self):
+        def pause(self):
             if self.repro_musica:
                 mixer.musica.pause()
                 self.repro_musica=False
             else:
                 mixer.music.unpause()
                 self.repro_musica=True
-        def detener(self):
-            mixer.music.stop()
+
 
 ventana=Tk()
 musica(ventana)
