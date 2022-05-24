@@ -1,6 +1,6 @@
 #Reproductor musica
 #Importar librerias
-from tkinter import*
+from tkinter import* #Hola como estas
 from tkinter import filedialog
 from pygame import mixer
 
