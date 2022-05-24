@@ -1,9 +1,9 @@
 #Reproductor musica
 #Importar librerias
 from tkinter import* #tkinter funciona para la creacion de una interfaz grafica.
-from tkinter import filedialog 
+from tkinter import filedialog #Esta funcion nos permite abrir una carpeta(En este caso para abrir la la ubicacion de la musica)
 from pygame import mixer  #Pygame sirve para cargar musica, reproducir sonidos y mezclador de sonidos.
-
+#Definimos las caractisristicas de los botones y en que parte de la vantana se van a ubicar
 class musica:
     def __init__(self,ventana): #_init_ sirve para Inicializar la ventana.
         ventana.geometry("270x300") #Tamaño de la ventana emergente.
