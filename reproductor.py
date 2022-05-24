@@ -29,7 +29,7 @@ class musica:
             mixer.music.play()
     def pausa(self):
         if self.repro_musica:
-            mixer.musica.pause()
+            mixer.music.pause()
             self.repro_musica=False
         else:
             mixer.music.unpause()
