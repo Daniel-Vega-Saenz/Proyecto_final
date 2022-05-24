@@ -6,7 +6,7 @@ from pygame import mixer  #Pygame sirve para cargar musica, reproducir sonidos y
 #Definimos las caractisristicas de los botones y en que parte de la vantana se van a ubicar
 class musica:
     def __init__(self,ventana): #_init_ sirve para Inicializar la ventana.
-        ventana.geometry("280x300") #Tamaño de la ventana emergente.
+        ventana.geometry("280x300") #La variable "geometry" permite establecer el tamaño de la ventana emergente.
         ventana.title("Reproductor") #Titulo de la ventana.
         ventana.config(bg="#8F9CDA",bd="25") #Caracteristicas del fondo de la ventana. Marco de la ventana.
 
