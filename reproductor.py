@@ -37,5 +37,5 @@ class musica:
             self.repro_musica=True
 
 ventana=Tk()
-musica(ventana)
+musica(ventana)#llamamos la clase junto con sus funciones, para que se ejecuten
 ventana.mainloop()
