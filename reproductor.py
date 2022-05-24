@@ -8,7 +8,7 @@ class musica:
     def __init__(self,ventana): #_init_ sirve para Inicializar la ventana.
         ventana.geometry("270x300") #Tamaño de la ventana emergente.
         ventana.title("Reproductor") #Titulo de la ventana.
-        ventana.config(bg="#0069c0",relief="ridge",bd="25") #Caracteristicas del fondo de la ventana.
+        ventana.config(bg="#0069c0",relief="ridge",bd="25") #Caracteristicas del fondo de la ventana. Marco de la ventana.
 
         abrir=Button(ventana,text="Abrir",width=10,bg="#FF0000",relief="groove",bd="4")
         abrir.place(x=60,y=50)
