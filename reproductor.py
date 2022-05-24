@@ -16,10 +16,11 @@ class musica:
         rep.place(x=70,y=90)
         pa=Button(ventana,text="Pausa",width=10,bg="#a21ad7",relief="groove",bd="4",command=self.pausa)
         pa.place(x=70,y=130)
-        self.abri_musica=False
-        self.repro_musica=False
+        self.abri_musica=False 
+        self.repro_musica=False #utilizamos el booleano "False", para que la musica no inicie cuando no le indicamo
 
     #Funciones
+    #Programamos las funciones de cada boton y que tienen que hacer cada uno 
     def abrir(self):
         self.abri_musica=filedialog.askopenfilename()
     def reproducir(self):
