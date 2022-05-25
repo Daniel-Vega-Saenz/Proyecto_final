@@ -17,6 +17,8 @@ class musica:
         rep.place(x=70,y=90)
         pa=Button(ventana,text="Pausa",width=10,bg="#a21ad7",relief="groove",bd="4",command=self.pausa)
         pa.place(x=70,y=130)
+        ag=Button(ventana,text="Añadir",width=10,bg="blue",relief="groove",bd="4",command=self.añadir)
+        ag.place(x=70,y=170)
         self.abri_musica=False 
         self.repro_musica=False #utilizamos el booleano "False", para que la musica no inicie cuando no le indicamo
 
