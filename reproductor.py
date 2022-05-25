@@ -11,6 +11,7 @@ class musica:
         ventana.config(bg="#8F9CDA",bd="25") #Caracteristicas del fondo de la ventana. Marco de la ventana.
 
         ab=Button(ventana,text="Abrir",width=10,bg="#0a5cb8",relief="groove",bd="4",command=self.abrir)
+        #la variable self, nos permite especificar y acceder a los atributos y metodos de la clase especificada
         ab.place(x=70,y=50)
         rep=Button(ventana,text="Reproducir",width=10,bg="#7f00b2",relief="groove",bd="4",command=self.reproducir)
         rep.place(x=70,y=90)
