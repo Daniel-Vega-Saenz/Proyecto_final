@@ -16,7 +16,7 @@ class musica:
         rep.place(x=70,y=90)
         pa=Button(ventana,text="Pausa",width=10,bg="#a21ad7",relief="groove",bd="4",command=self.pausa)
         pa.place(x=70,y=130)
-        sg=Button(ventana,text="siguiente",width=10,bg="blue",relief="groove",bd="4",command=self.sigiente)
+        sg=Button(ventana,text="siguiente",width=10,bg="blue",relief="groove",bd="4",command=self.siguiente)
         sg.place(x=70,y=170)
         self.abri_musica=False 
         self.repro_musica=False 
@@ -35,14 +35,15 @@ class musica:
         else:
             mixer.music.unpause()
             self.repro_musica=True
-    def siguiente():
-        proxima=ventana.curselection()
-        proxima=proxima[0]=1
-        cancion=ventana.get(proxima)
-        cancion=f"{cancion}.MP3"
-        cancion=f"{cancion}."
-       
-        
+    def siguiente(self):
+        if self.next_musica:
+            mixer.music.load(cancion)
+            proxima=ventana.curselection()
+            proxima=proxima[0]=1
+            cancion=ventana.get(proxima)
+            cancion=f"{cancion}.mp3"
+        else:
+            mixer.music.play(loops=0)
 ventana=Tk()
 musica(ventana)
-ventana.mainloop()
+ventana.mainloop() 
