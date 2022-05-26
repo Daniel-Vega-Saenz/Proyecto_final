@@ -36,7 +36,6 @@ class musica:
             mixer.music.unpause()
             self.repro_musica=True
     def siguiente():
-        #obtenerel numero de cancion que esta sonando
         proxima=ventana.curselection()
         proxima=proxima[0]=1
         cancion=ventana.get(proxima)

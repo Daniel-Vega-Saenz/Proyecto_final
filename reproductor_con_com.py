@@ -38,6 +38,14 @@ class musica:
         else:
             mixer.music.unpause()
             self.repro_musica=True
+    def siguiente():
+        #obtenerel numero de cancion que esta sonando
+        proxima=ventana.curselection()
+        proxima=proxima[0]=1
+        cancion=ventana.get(proxima)
+        cancion=f"{cancion}.MP3"
+        cancion=f"{cancion}."
+       
 
 ventana=Tk()
 musica(ventana)#llamamos la clase junto con sus funciones, para que se ejecuten
