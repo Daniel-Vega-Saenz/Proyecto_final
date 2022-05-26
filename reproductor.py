@@ -40,7 +40,7 @@ class musica:
         proxima=ventana.curselection()
         proxima=proxima[0]=1
         cancion=ventana.get(proxima)
-        cancion=f"{cancion}.mp3"
+        cancion=f"{cancion}.MP3"
         cancion=f"{cancion}."
        
         
