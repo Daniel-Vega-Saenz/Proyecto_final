@@ -67,14 +67,12 @@ def pause (is_paused):
 pantalla=Listbox(bg="#FF5733", fg="blue",width=60,selectbackground="white", selectforeground="black")
 pantalla.pack(pady=20)
 ag=Button(ventana,text="Abrir",width=10,bg="red",relief="groove",bd="4",command=añadir)
-ag.place(x=10,y=10)
+ag.place(x=5,y=190)
 rep=Button(ventana,text="Reproducir",width=10,bg="#7f00b2",relief="groove",bd="4",command=play)
-rep.place(x=20,y=20)
+rep.place(x=120,y=190)
 pa=Button(ventana,text="Pausa",width=10,bg="#a21ad7",relief="groove",bd="4",command=anterior)
-pa.place(x=30,y=30)
+pa.place(x=235,y=190)
 sg=Button(ventana,text="siguiente",width=10,bg="blue",relief="groove",bd="4",command=siguiente)
-sg.place(x=40,y=40)
+sg.place(x=235,y=190)
 
 ventana.mainloop()
-
-
