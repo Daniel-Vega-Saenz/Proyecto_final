@@ -52,27 +52,24 @@ def anterior():
     last= None
     pantalla.selection_set(proxima,last)
 
-global paused
-paused=False
-def pause (is_paused):
-    global paused
-    paused=is_paused
-    if paused:
-        pygame.mixer.music.unpause()
-        paused=False
+def pausa():
+    if pausa:
+        pygame.mixer.music.pause()
+        pausa=False
     else:
-        pygame.mexer.music.pause()
-        paused= True
+        pygame.mixer.music.unpause()
+        pausa=True
 
 pantalla=Listbox(bg="#FF5733", fg="blue",width=60,selectbackground="white", selectforeground="black")
 pantalla.pack(pady=20)
 ag=Button(ventana,text="Abrir",width=10,bg="red",relief="groove",bd="4",command=añadir)
-ag.place(x=42,y=190)
+ag.place(x=1,y=190)
 rep=Button(ventana,text="Reproducir",width=10,bg="#7f00b2",relief="groove",bd="4",command=play)
-rep.place(x=138,y=190)
-pa=Button(ventana,text="Pausa",width=10,bg="#a21ad7",relief="groove",bd="4",command=anterior)
-pa.place(x=230,y=190)
-sg=Button(ventana,text="siguiente",width=10,bg="blue",relief="groove",bd="4",command=siguiente)
-sg.place(x=325,y=190)
-
+rep.place(x=100,y=190)
+ant=Button(ventana,text="Anterior",width=10,bg="#a21ad7",relief="groove",bd="4",command=anterior)
+ant.place(x=199,y=190)
+sg=Button(ventana,text="Siguiente",width=10,bg="blue",relief="groove",bd="4",command=siguiente)
+sg.place(x=298,y=190)
+pa=Button(ventana,text="Pausa",width=10,bg="white",relief="groove",bd="4",command=pausa)
+pa.place(x=397,y=190)
 ventana.mainloop()
