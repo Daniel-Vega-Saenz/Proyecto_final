@@ -1,4 +1,5 @@
 
+from cgi import parse_multipart
 from tkinter import* 
 from tkinter import filedialog 
 import pygame
@@ -51,14 +52,16 @@ def anterior():
     pantalla.activate(proxima)
     last= None
     pantalla.selection_set(proxima,last)
-
+global pausar
+pausar=False
 def pausa():
-    if pausa:
-        pygame.mixer.music.pause()
-        pausa=False
-    else:
+    global pausar
+    if pausar:
         pygame.mixer.music.unpause()
-        pausa=True
+        pausar=False
+    else:
+        pygame.mixer.music.pause()
+        pausar=True
 
 pantalla=Listbox(bg="#FF5733", fg="blue",width=60,selectbackground="white", selectforeground="black")
 pantalla.pack(pady=20)
