@@ -29,7 +29,7 @@ def stop():
 
 def siguiente():
     proxima=pantalla.curselection()
-    proxima=proxima=+1
+    proxima=proxima[0]+1
     cancion=pantalla.get(proxima)
     cancion=f"{cancion}.mp3"
     pygame.mixer.music.load(cancion)
