@@ -1,11 +1,14 @@
-from tkinter import* 
-from tkinter import filedialog 
-import pygame
-ventana=Tk() 
-ventana.geometry("500x300") 
-ventana.title("SpotyEan") 
-ventana.config(bg="#191414",bd="25") 
-pygame.mixer.init()
+#Reproductor de Música
+#Importar librerias
+from tkinter import* #tkinter funciona para la creacion de una interfaz grafica.
+from tkinter import filedialog #Esta funcion nos permite abrir una carpeta(En este caso para abrir la la ubicacion de la musica)
+import pygame#Pygame sirve para cargar musica, reproducir sonidos y mezclador de sonidos.
+
+ventana=Tk() #Iniciamos una ventana que es la interface
+ventana.geometry("500x300") #La variable "geometry" permite establecer el tamaño de la ventana emergente.
+ventana.title("SpotyEan") #Titulo de la ventana.
+ventana.config(bg="#191414",bd="25") #Caracteristicas del fondo de la ventana. Marco de la ventana.
+pygame.mixer.init() #_init_ sirve para Inicializar la ventana.
 
 def añadir():
     canciones=filedialog.askopenfilenames(filetypes=(("mp3","*.mp3"),("all files","*.*")))
